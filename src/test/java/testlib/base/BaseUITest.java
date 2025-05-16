@@ -1,18 +1,18 @@
 package testlib.base;
 
 import com.codeborne.selenide.SelenideDriver;
-import com.codeborne.selenide.webdriver.WebDriverFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import testlib.utils.PropertiesHandler;
 
-public class BaseTest {
+public class BaseUITest {
 
     protected SelenideDriver driver;
 
     @BeforeEach
     public void setup(){
         driver=SelenideDriverFactory.getDriver();
-        driver.open("https://practice-automation.com/form-fields/");
+        driver.open("http://"+PropertiesHandler.getProperties().getProperty("baseURL"));
     }
 
     @AfterEach
