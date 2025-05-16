@@ -5,7 +5,6 @@ import testlib.pageObjects.BasePage;
 
 public class HomePage extends BasePage {
 
-
     public HomePage(SelenideDriver driver) {
         super(driver);
 
